@@ -272,9 +272,9 @@ export async function getCppProperties(cCppPropertiesPath: string, currentSettin
 
                                     if (acceptFile) {
                                         // Windows drive letter must be prefixed with a slash
-                                        if (currentFilePath[0] !== '/') {
-                                            currentFilePath = '/' + currentFilePath;
-                                        }
+                                        // if (currentFilePath[0] !== '/') {
+                                        //     currentFilePath = '/' + currentFilePath;
+                                        // }
 
                                         if (currentSettings['c-cpp-flylint'].debug) {
                                             console.log('Adding path: ' + currentFilePath);
@@ -286,9 +286,9 @@ export async function getCppProperties(cCppPropertiesPath: string, currentSettin
                                 } else {
                                     // file is outside of workspace root, perhaps a system folder
                                     // Windows drive letter must be prefixed with a slash
-                                    if (currentFilePath[0] !== '/') {
-                                        currentFilePath = '/' + currentFilePath;
-                                    }
+                                    // if (currentFilePath[0] !== '/') {
+                                    //     currentFilePath = '/' + currentFilePath;
+                                    // }
 
                                     if (currentSettings['c-cpp-flylint'].debug) {
                                         console.log('Adding system path: ' + currentFilePath);

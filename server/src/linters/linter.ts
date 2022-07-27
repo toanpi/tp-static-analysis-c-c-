@@ -303,6 +303,10 @@ export class Linter {
         let stdout = result.stdout !== null ? result.stdout.replace(/\r/g, '').split('\n') : [];
         let stderr = result.stderr !== null ? result.stderr.replace(/\r/g, '').split('\n') : [];
 
+        if (result.error) {
+            console.error(result.error);
+        }
+
         if (this.settings['c-cpp-flylint'].debug) {
             console.log(stdout);
             console.log(stderr);
